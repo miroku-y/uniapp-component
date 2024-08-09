@@ -18,6 +18,12 @@
       "style": {
         "navigationBarTitleText": "Uni-App-Components"
       }
+    },
+    {
+      "path": "pages/button/index",
+      "style": {
+        "navigationBarTitleText": "Button"
+      }
     }
   ],
   "globalStyle": {
