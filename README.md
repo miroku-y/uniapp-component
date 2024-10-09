@@ -4,3 +4,4 @@
 
 2. 开发轮播组件XtxSwiper 时提示ReferenceError: defineProps is not defined
 解决方式：从vue 中导入defineProps 或者查看eslintrc 的配置是否正确【extends】 ,其次就是<script setup lang="ts"> 组件一定要定义setup
+Vue3 手把手教你自定义组件——setup版（不同与组合式api 的写法） https://juejin.cn/post/7091562373147787277 

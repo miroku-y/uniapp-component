@@ -1,7 +1,7 @@
 /*
  * @Author: miroku.yang
  * @Date: 2024-07-07 14:00:30
- * @LastEditors: 
+ * @LastEditors: Please set LastEditors
  * @Description: 
  */
 /* eslint-env node */
@@ -9,6 +9,11 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    node: true,
+  },
+  "vue/setup-compiler-macros": true,
   extends: [
     'plugin:vue/vue3-essential',
     'eslint:recommended',
