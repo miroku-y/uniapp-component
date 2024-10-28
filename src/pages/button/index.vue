@@ -5,13 +5,50 @@
  * @Description: 
 -->
 <template>
-    <view>按钮类型</view>
-    <view class="button-demo">
-        <XtxButton type="primary">Primary Button</XtxButton>
-        <XtxButton>Default Button</XtxButton>
-        <XtxButton type="dashed">Dashed Button</XtxButton>
-        <XtxButton type="text">Text Button</XtxButton>
-        <XtxButton type="link">Link Button</XtxButton>
+    <view class="component-content">
+        <view class="component-title">Button</view>
+        <view class="button-demo">
+            <view class="code-box-description">
+                <view>语法糖</view>
+                <view>通过 <code>type</code> 语法糖，使用预设的按钮样式：主按钮、次按钮、虚线按钮、文本按钮和链接按钮。推荐主按钮在同一个操作区域最多出现一次。</view>
+            </view>
+            <view class="block">
+                <XtxButton type="primary">Primary Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton>Default Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="dashed">Dashed Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="text">Text Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="link">Link Button</XtxButton>
+            </view>
+            <br/>
+            <br/>
+            <view class="code-box-description">
+                <view>block 按钮</view>
+                <view><code>block</code> 属性将使按钮适合其父宽度。</view>
+            </view>
+            <view class="block">
+                <XtxButton type="primary" block>Primary Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton block>Default Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="dashed" block>Dashed Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="text" block>Text Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="link" block>Link Button</XtxButton>
+            </view>
+        </view>
     </view>
 </template>
 <style lang="scss" scoped>

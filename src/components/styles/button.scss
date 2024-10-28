@@ -1,34 +1,86 @@
-.uui-button{
+.uui-button {
     text-align: center;
     border-radius: 2px;
     cursor: pointer;
     border: 1px solid #d9d9d9;
-    padding:4px 15px;
-    &--default{
+    padding: 4px 15px;
+
+    &-wrap {
+        width: 100%;
+    }
+
+    &--default {
         background-color: #fff;
     }
-    &--primary{
+
+    &--primary {
         border-color: transparent;
         background-color: #4096ff;
     }
-    &--dashed{
+
+    &--dashed {
         border-style: dashed;
         background-color: #fff;
     }
-    &--text{
+
+    &--text {
         border-color: transparent;
         background-color: transparent;
-    }
-    &--link{
-        border-color: transparent;
-        background-color: transparent;
-        color:#4096ff;
     }
 
-    >span{
+    &--link {
+        border-color: transparent;
+        background-color: transparent;
+        color: #4096ff;
+    }
+
+    &--block {
+        width: 100%;
+    }
+
+    >span {
         line-height: 22px;
     }
-    &-wrap{
+
+    &-wrap {
         display: inline-block;
+    }
+
+    .circular {
+        margin-right: 6px;
+        width: 18px;
+        height: 18px;
+        animation: loading-rotate 2s linear infinite;
+    }
+
+    .circular .path {
+        animation: loading-dash 1.5s ease-in-out infinite;
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: 0;
+        stroke-width: 2;
+        stroke: #409eff;
+        stroke-linecap: round;
+    }
+}
+@keyframes loading-rotate {
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes loading-dash {
+    0% {
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0
+    }
+
+    50% {
+        stroke-dasharray: 90,150;
+        stroke-dashoffset: -40px
+    }
+
+    to {
+        stroke-dasharray: 90,150;
+        stroke-dashoffset: -120px
     }
 }

@@ -43,7 +43,7 @@ const list = ref([
   {
     title: "基础组件",
     id: "1",
-    components: [{ name: "Button 按钮", id: "101", pathName: "button" }],
+    components: [{ name: "Button 按钮", id: "101", pathName: "button" },{ name: "Spin 加载", id: "102", pathName: "spin" }],
   },
 ]);
 </script>

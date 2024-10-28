@@ -24,6 +24,12 @@
       "style": {
         "navigationBarTitleText": "Button"
       }
+    },
+    {
+      "path": "pages/spin/index",
+      "style": {
+        "navigationBarTitleText": "Spin"
+      }
     }
   ],
   "globalStyle": {

@@ -6,8 +6,11 @@
 -->
 <template>
   <view class="uui-button-wrap">
-    <Button class="uui-button" :class="[`uui-button--${type}`]">
-      <span><slot></slot></span>
+    <Button class="uui-button" :class="[`uui-button--${type}`, { 'uui-button--block': block }]">
+      <svg class="circular" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none"></circle></svg>
+      <span>
+        <slot></slot>
+      </span>
     </Button>
   </view>
 </template>
@@ -39,11 +42,13 @@
 //   type: string;
 // }>();
 
-// ts写法(3.5版本) 不生效
+// 生效
 const props = withDefaults(defineProps<{
   type: string;
+  block: boolean;
 }>(), {
-  type: 'default'
+  type: 'default',
+  block: false,
 });
 </script>
 
