@@ -46,6 +46,13 @@
         display: inline-block;
     }
 
+    &--loading{
+        display: flex;
+        align-items: center;
+        opacity: 0.65;
+        cursor: default;
+    }
+
     .circular {
         margin-right: 6px;
         width: 18px;
@@ -58,7 +65,7 @@
         stroke-dasharray: 90, 150;
         stroke-dashoffset: 0;
         stroke-width: 2;
-        stroke: #409eff;
+        stroke: #fff;
         stroke-linecap: round;
     }
 }

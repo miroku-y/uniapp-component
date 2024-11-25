@@ -6,12 +6,12 @@
 -->
 <template>
   <view class="uui-button-wrap">
-    <Button class="uui-button" :class="[`uui-button--${type}`, { 'uui-button--block': block }]">
-      <svg class="circular" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none"></circle></svg>
+    <button class="uui-button" :class="[`uui-button--${type}`, { 'uui-button--block': block , 'uui-button--loading': loading }]" @click="handleClick">
+      <svg v-if="loading" class="circular" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none"></circle></svg>
       <span>
         <slot></slot>
       </span>
-    </Button>
+    </button>
   </view>
 </template>
 
@@ -46,10 +46,21 @@
 const props = withDefaults(defineProps<{
   type: string;
   block: boolean;
+  loading: boolean;
+  onClick: (e:any) =>void
 }>(), {
   type: 'default',
   block: false,
+  loading: false,
 });
+
+const handleClick = (e:any) =>{
+  if(props.loading){
+    return
+  }
+  props.onClick && props.onClick(e)
+}
+
 </script>
 
 <style lang="scss">

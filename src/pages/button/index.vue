@@ -48,9 +48,36 @@
             <view class="block">
                 <XtxButton type="link" block>Link Button</XtxButton>
             </view>
+            <view class="code-box-description">
+                <view>加载中状态</view>
+                <view>通过 <code>loading</code> 属性即可让按钮处于加载状态，最后1个按钮演示点击后进入加载状态。</view>
+            </view>
+            <view class="block">
+                <XtxButton type="primary" loading>Primary Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="primary" loading>Default Button</XtxButton>
+            </view>
+            <view class="block">
+                <XtxButton type="primary" :loading='localLoading' @click="handleClick">Click Button</XtxButton>
+            </view>
         </view>
     </view>
 </template>
+<script setup lang="ts">
+    import {  ref } from 'vue'
+    // 动态设置loading
+    const localLoading = ref<boolean>(false)
+
+    const handleClick = () =>{
+        console.log(localLoading,'localLoading')
+        localLoading.value = !localLoading.value
+        setTimeout(() => {
+            localLoading.value = false
+        }, 6000);
+    }
+
+</script>
 <style lang="scss" scoped>
 @import "./index.scss";
 </style>
