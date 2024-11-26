@@ -6,6 +6,7 @@
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 26px;
+    display: flex;
     code{
       margin: 0 1px;
       padding: 0.2em 0.4em;
@@ -23,6 +24,9 @@
   .block{
     margin-bottom: 20px;
   }
+}
+.demo-wrap{
+  margin-bottom: 12px;
 }
 .button-demo::v-deep .uui-button {
   margin-right: 10px;

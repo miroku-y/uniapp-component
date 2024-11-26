@@ -5,14 +5,13 @@
  * @Description: 
 -->
 <template>
-  <view class="uui-button-wrap">
     <button class="uui-button" :class="[`uui-button--${type}`, { 'uui-button--block': block , 'uui-button--loading': loading }]" @click="handleClick">
-      <svg v-if="loading" class="circular" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none"></circle></svg>
+      <!-- <svg v-if="loading" class="circular" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none"></circle></svg> -->
+      <!-- <img class="circular" src="data:image/svg+xml;base64,PHN2ZyBkYXRhLXYtNDQwNTk0OTg9IiIgY2xhc3M9ImNpcmN1bGFyIiB2aWV3Qm94PSIwIDAgNTAgNTAiPjxjaXJjbGUgZGF0YS12LTQ0MDU5NDk4PSIiIGNsYXNzPSJwYXRoIiBjeD0iMjUiIGN5PSIyNSIgcj0iMjAiIGZpbGw9Im5vbmUiPjwvY2lyY2xlPjwvc3ZnPg=="/> -->
       <span>
         <slot></slot>
       </span>
     </button>
-  </view>
 </template>
 
 <script lang="ts" setup>
