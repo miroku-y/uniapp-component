@@ -7,6 +7,10 @@
     font-size: 14px;
     line-height: 26px;
     display: flex;
+    flex-direction: column;
+    view{
+      display: inline;
+    }
     code{
       margin: 0 1px;
       padding: 0.2em 0.4em;
