@@ -27,6 +27,13 @@
             <view class="block">
                 <XtxSpin mode="semicircle">semicircle Loading</XtxSpin>
             </view>
+            <view class="block">
+                <XtxSpin mode="loading1"></XtxSpin>
+            </view>
+            <view class="block">
+                <!-- 阴影动画是非常耗性能的，动画化阴影会触发三个事件——绘制、布局更改和合成，其中绘制是最费力的 -->
+                <XtxSpin mode="loading2"></XtxSpin>
+            </view>
         </view>
     </view>
 </template>
